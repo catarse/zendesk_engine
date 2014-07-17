@@ -4,12 +4,12 @@ class ZendeskEngine::TicketsController < ZendeskEngine::BaseController
   delegate :users, :tickets, to: :client
 
   def create
-    tickets.create(permitted_params[:ticket].merge(submitter_id: user.id))
+    render json: tickets.create(permitted_params[:ticket].merge(submitter_id: user.id))
   end
 
   private
   def user
-    users.search(query: "email:#{params[:email]}").first || users.create(permitted_params[:user])
+    users.search(query: "email:#{params[:user][:email]}").first || users.create(permitted_params[:user])
   end
 
   def permitted_params
