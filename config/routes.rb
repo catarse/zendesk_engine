@@ -1,2 +1,3 @@
-Rails.application.routes.draw do
+ZendeskEngine::Engine.routes.draw do
+  resources :tickets, only: [:create]
 end

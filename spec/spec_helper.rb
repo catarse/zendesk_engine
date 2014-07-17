@@ -10,6 +10,7 @@ require 'rspec/rails'
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
 RSpec.configure do |config|
+  config.infer_spec_type_from_file_location!
   config.use_transactional_examples = true
 
   config.before(:each) do
