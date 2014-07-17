@@ -1,10 +1,11 @@
 module ZendeskEngine
   module Configuration
-    VALID_CONFIG_KEYS    = [:url, :email, :token]
+    VALID_CONFIG_KEYS    = [:url, :user, :token, :parent_controller]
 
-    DEFAULT_URL   = nil
-    DEFAULT_EMAIL = nil
-    DEFAULT_TOKEN = nil
+    DEFAULT_URL               = nil
+    DEFAULT_USER             = nil
+    DEFAULT_TOKEN             = nil
+    DEFAULT_PARENT_CONTROLLER = "ApplicationController"
 
     # Build accessor methods for every config options so we can do this, for example:
     #   Awesome.format = <img src="http://s2.wp.com/wp-includes/images/smilies/icon_mad.gif?m=1129645325g" alt=":x" class="wp-smiley"> ml
@@ -24,9 +25,10 @@ module ZendeskEngine
     end
 
     def reset
-      self.url   = DEFAULT_URL
-      self.email = DEFAULT_EMAIL
-      self.token = DEFAULT_TOKEN
+      self.url                = DEFAULT_URL
+      self.user               = DEFAULT_USER
+      self.token              = DEFAULT_TOKEN
+      self.parent_controller  = DEFAULT_PARENT_CONTROLLER
     end
 
   end # Configuration
