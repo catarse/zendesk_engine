@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = ZendeskEngine::VERSION
   s.authors     = ["Diogo Biazus"]
   s.email       = ["diogo@biazus.me"]
-  s.homepage    = "http://"
+  s.homepage    = "https://github.com/catarse/zendesk_engine"
   s.summary     = "This engine provides a controller to create tickets through zendesk API"
   s.description = "This engine provides a controller to create tickets through zendesk API"
   s.license     = "MIT"
