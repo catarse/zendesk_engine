@@ -26,7 +26,7 @@ This will add the /tickets resources route to the path you've chosen as mouting 
 ## Make requests
 After this you can post tickets to /tickets and they will be relayed to the Zendesk API via the zendesk_api gem ;)
 The parameters to ticket creation should be:
-```json
+```ruby
 {
   user: {
     email: 'foo@bar.com',
