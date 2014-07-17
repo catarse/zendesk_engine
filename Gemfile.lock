@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    zendesk_engine (0.0.1)
+    zendesk_engine (0.0.2)
       rails (~> 4.1.4)
       zendesk_api
 
